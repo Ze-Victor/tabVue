@@ -34,16 +34,8 @@ const Template = (args) => ({
   template: '<Tab v-bind="args" />',
 });
 
-export const TabComponent = Template.bind({});
+export const Primary = Template.bind({});
 
-TabComponent.args = {
+Primary.args = {
   tab,
-};
-
-TabComponent.parameters = {
-  docs: {
-    source: {
-      code: '<Tab :tab="tab" />',
-    },
-  },
 };

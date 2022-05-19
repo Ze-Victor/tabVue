@@ -12,36 +12,25 @@ interface TabProps {
 
 defineProps<TabProps>();
 
-// states
 const currentTab = ref(0);
 
-// functions
-const tabOnClick = (tabIndex: number) => {
+const onClick = (tabIndex: number) => {
   currentTab.value = tabIndex;
-};
-
-const isTabSelected = (tabIndex: number) => {
-  if (tabIndex === currentTab.value) {
-    return true;
-  }
-
-  return false;
 };
 </script>
 
 <template>
-  <div class="tab-container">
+  <div class="tabButton">
     <Button
       v-for="(tabItem, index) in tab"
       :key="tabItem.buttonText"
-      :title="tabItem.buttonText"
-      :selected="isTabSelected(index)"
+      :text="tabItem.buttonText"
       :index="index"
-      @on-click="tabOnClick"
+      @on-click="onClick"
     ></Button>
-
-    <div>{{ tab[currentTab].paneText }}</div>
   </div>
+
+  <div class="tabPane">{{ tab[currentTab].paneText }}</div>
 </template>
 
 <style scoped src="./styles.css"></style>

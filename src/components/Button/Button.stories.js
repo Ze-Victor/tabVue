@@ -3,12 +3,6 @@ import Button from "./Button.vue";
 export default {
   title: "Button",
   component: Button,
-  argTypes: {
-    title: { control: "text" },
-    selected: { control: "boolean" },
-    index: { control: "number" },
-    onClick: {},
-  },
 };
 
 const Template = (args) => ({
@@ -21,25 +15,9 @@ const Template = (args) => ({
   template: '<Button v-bind="args" />',
 });
 
-export const ButtonComponent = Template.bind({});
+export const Primary = Template.bind({});
 
-ButtonComponent.args = {
-  selected: false,
-  title: "Botão",
+Primary.args = {
+  text: "Botão",
   index: 1,
-};
-
-ButtonComponent.parameters = {
-  docs: {
-    source: {
-      code: `
-<Button 
-  :selected="false" 
-  title="Botão" 
-  :index="1" 
-  @on-click="onClickFunction" 
-/>
-      `,
-    },
-  },
 };
