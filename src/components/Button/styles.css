@@ -8,9 +8,6 @@ button {
   font-weight: 300;
 
   cursor: pointer;
-  margin-left: 3px;
-}
-
-.borderButton {
-  border-bottom: solid 3px red;
+  /* margin-left: 3px; */
+  background-color: #fff;
 }

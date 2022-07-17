@@ -13,5 +13,6 @@ import FormTab from "./components/FormTab/FormTab.vue";
 <style>
 .paneApp {
   display: flex;
+  margin-left: 10px;
 }
 </style>
