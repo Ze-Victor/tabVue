@@ -1,16 +1,32 @@
-.tabButton {
+.pane {
   display: flex;
+  flex-direction: column;
+  width: 500px;
+  background-color: gray;
+  padding: 20px;
+}
+
+.title {
+  font-size: 20px;
+}
+
+.tabButton {
+  margin-top: 20px;
+  display: flex;
+  width: 500px;
+}
+
+.selected {
+  border-bottom: 3px solid blue;
 }
 
 .tabPane {
-  margin-top: 50px;
   width: 500px;
   height: 150px;
   background-color: grey;
   display: flex;
   align-items: center;
   justify-content: center;
-  border: solid 3px black;
-  border-radius: 8px;
+  border: none;
   font-size: 24px;
 }
